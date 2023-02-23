@@ -1,6 +1,3 @@
-import document from "document";
-import * as messaging from "messaging";
-import { ApiClient } from "./spotify-api-client";
 import * as Commands from "../common/commands";
 
 class App {

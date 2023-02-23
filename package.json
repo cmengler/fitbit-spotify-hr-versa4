@@ -12,16 +12,21 @@
       "access_user_profile"
     ],
     "buildTargets": [
-      "meson",
-      "higgs"
+      "atlas"
     ],
     "i18n": {
       "en": {
         "name": "Spotify HR"
       }
-    }
+    },
+    "enableProposedAPI": true
+  },
+  "scripts": {
+    "build": "fitbit-build",
+    "debug": "fitbit"
   },
   "devDependencies": {
-    "@fitbit/sdk": "~1.0.0"
+    "@fitbit/sdk": "~7.1.0-pre.0",
+    "@fitbit/sdk-cli": "~1.8.0-pre.10"
   }
 }

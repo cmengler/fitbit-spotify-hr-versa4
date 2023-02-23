@@ -27,7 +27,7 @@ class MessageBroker {
     }
   }
   
-  sendCommand(command, ...args = []) {
+  sendCommand(command, ...args) {
     let data = {
       type: 'command',
       name: command,

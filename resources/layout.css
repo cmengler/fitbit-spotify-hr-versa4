@@ -7,12 +7,12 @@
   x: 0;
   y: 0;
   width: 70;
-  height: 70;
+  height: 80;
 }
 
 #logo {
-  x: 5;
-  y: 5;
+  x: 32;
+  y: 22;
   width: 40;
   height: 40;
 }
@@ -48,12 +48,12 @@
 
 #menu .menu-title {
   x: 50%;
-  y: 40;
+  y: 50;
 }
 
 #menu-list {
-  x: 30;
-  y: 60;
+  x: 0;
+  y: 80;
   height: 100%-80;
 }
 
@@ -78,40 +78,40 @@
 
 #menu-playlists-button {
   x: 0;
-  y: 52;
+  y: 70;
   width: 100%;
   height: 70;
 }
 
 #menu-playlists-button image {
   x: 20;
-  y: 62;
+  y: 75;
   width: 50;
   height: 50;
 }
 
 #menu-playlists-button text {
   x: 85;
-  y: 97;
+  y: 110;
 }
 
 #menu-volume-button {
   x: 0;
-  y: 117;
+  y: 140;
   width: 100%;
-  height: 60;
+  height: 70;
 }
 
 #menu-volume-button image {
   x: 20;
-  y: 127;
+  y: 150;
   width: 50;
   height: 50;
 }
 
 #menu-volume-button text {
   x: 85;
-  y: 162;
+  y: 185;
 }
 
 /**
@@ -125,8 +125,8 @@
 }
 
 #heart-rate {
-  x: 238;
-  y: 5;
+  x: 192;
+  y: 22;
   width: 105;
   height: 55;
 }
@@ -158,36 +158,36 @@
 }
 
 #back-button {
-  x: 34;
-  y: 72;
+  x: 28;
+  y: 107;
   width: 70;
   height: 70;
 }
 
 #play-button {
-  x: 124;
-  y: 55;
+  x: 118;
+  y: 90;
   width: 100;
   height: 100;
 }
 
 #pause-button {
-  x: 124;
-  y: 55;
+  x: 118;
+  y: 90;
   width: 100;
   height: 100;
 }
 
 #next-button {
-  x: 244;
-  y: 72;
+  x: 238;
+  y: 107;
   width: 70;
   height: 70;
 }
 
 #current-track {
-  x: 10;
-  y: 178;
+  x: 16;
+  y: 228;
   width: 100%-20;
   height: 100%-70;
 }
@@ -203,7 +203,7 @@
   y: 30;
   width: 100%-50;
 }
-
+ 
 #player-current-playlist-name {
   x: 0;
   y: 55;
@@ -211,30 +211,31 @@
 }
 
 #player-menu-button {
-  x: 100%-70;
+  x: 100%-82;
   y: 0;
   width: 70;
   height: 70;
 }
 
 #player-menu-button image {
-  x: 100%-50;
+  x: 100%-62;
   y: 10;
   width: 50;
   height: 50;
 }
 
 #track-progress-bar-container {
-  x: 0;
-  y: 248;
-  width: 348;
+  x: 18;
+  y: 298;
+  width: 300;
   height: 2;
   fill: #333333;
 }
 
 #track-progress-bar-fill {
-  x: 0;
-  y: 248;
+  x: 18;
+  y: 298;
+  width: 100%;
   height: 2;
   fill: #dddddd;
 }
@@ -245,13 +246,13 @@
 
 #playlists-picker .playlist-title {
   x: 50%;
-  y: 40;
+  y: 50;
 }
 
 #playlist-list {
   x: 0;
-  y: 60;
-  height: 100%-60;
+  y: 80;
+  height: 100%-80;
 }
 
 #previous-playlist-button {
@@ -270,51 +271,51 @@
 
 #previous-playlist-text {
   x: 50%;
-  y: 55;
+  y: 70;
 }
 
 #current-playlist-button {
   x: 40;
-  y: 55;
+  y: 65;
   width: 100%-80;
   height: 70;
 }
 
 #current-playlist-text {
   x: 50%;
-  y: 95;
+  y: 110;
   width: 100%;
 }
 
 #next-playlist-text {
   x: 50%;
-  y: 130;
+  y: 145;
 }
 
 #next-playlist-button {
   x: 40;
-  y: 135;
+  y: 170;
   width: 100%-80;
   height: 40;
 }
 
 #next-playlist-button image {
   x: 50%-20;
-  y: 155;
+  y: 190;
   width: 40;
   height: 20;
 }
 
 #playlists-done-button {
   x: 100%-70;
-  y: 175;
+  y: 230;
   width: 70;
   height: 70;
 }
 
 #playlists-done-button image {
   x: 100%-60;
-  y: 185;
+  y: 240;
   width: 50;
   height: 50;
 }
@@ -324,13 +325,13 @@
  */
 #volume .volume-title {
   x: 50%;
-  y: 40;
+  y: 50;
 }
 
 #volume-control {
   x: 0;
-  y: 60;
-  height: 100%-60;
+  y: 80;
+  height: 100%-80;
 }
 
 #increase-volume-button {
@@ -349,7 +350,7 @@
   x: 50%-10;
   y: 50;
   width: 20;
-  height: 90;
+  height: 110;
 }
 
 #volume-bar-fill {
@@ -359,26 +360,26 @@
 
 #decrease-volume-button {
   x: 40;
-  y: 175;
+  y: 185;
   width: 100%-80;
   height: 40;
 }
 
 #decrease-volume-button text {
   x: 50%-1;
-  y: 185;
+  y: 205;
 }
 
 #volume-done-button {
   x: 100%-70;
-  y: 120;
+  y: 150;
   width: 70;
   height: 70;
 }
 
 #volume-done-button image {
   x: 100%-60;
-  y: 130;
+  y: 160;
   width: 50;
   height: 50;
 }

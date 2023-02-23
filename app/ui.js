@@ -1,6 +1,6 @@
 import document from "document";
 import * as messaging from "messaging";
-import HearRateTracker from "./heart-rate";
+import HearRateTracker from "./components/heart-rate";
 import { me as device } from "device";
 
 class Ui {

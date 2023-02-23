@@ -2,7 +2,7 @@
   <rect id="background" />
   
   <rect id="logo-button" class="button" pointer-events="visible">
-    <image id="logo" href="icon.png" load="sync" />
+    <image id="logo" href="icons/logo.png" load="sync" />
   </rect>
   
   <svg id="loading">
@@ -84,7 +84,7 @@
   </svg>
   
   <svg id="playlists-picker" class="page">
-    <text class="playlist-title">Choose a playlist...</text>
+    <text class="playlist-title">Playlist</text>
     
     <svg id="playlist-list">
       <rect id="previous-playlist-button" class="button" pointer-events="visible">
@@ -108,7 +108,7 @@
   </svg>
   
   <svg id="volume" class="page">
-    <text class="volume-title">Change volume...</text>
+    <text class="volume-title">Volume</text>
     
     <svg id="volume-control">
       <rect id="increase-volume-button" class="button" pointer-events="visible">
