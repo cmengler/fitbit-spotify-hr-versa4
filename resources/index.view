@@ -11,7 +11,7 @@
   
   <svg id="login-to-spotify" class="page">
       <text class="main-heading">Please login to Spotify</text>
-      <text class="sub-heading">On the FitBit App</text>
+      <text class="sub-heading">On the Fitbit App</text>
       <text class="sub-heading--second">Device > Apps > Spotify HR > Settings</text>
   </svg>
   
@@ -27,7 +27,7 @@
   
   <svg id="connecting" class="page">
       <text class="main-heading">Connecting</text>
-      <text class="sub-heading">Lost connection to the FitBit app</text>
+      <text class="sub-heading">Lost connection to the Fitbit app</text>
   </svg>
   
   <svg id="menu" class="page">
