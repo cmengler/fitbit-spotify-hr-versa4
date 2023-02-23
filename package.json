@@ -12,7 +12,8 @@
       "access_user_profile"
     ],
     "buildTargets": [
-      "atlas"
+      "atlas",
+      "hera"
     ],
     "i18n": {
       "en": {
@@ -21,12 +22,13 @@
     },
     "enableProposedAPI": true
   },
+  "devDependencies": {
+    "@fitbit/sdk": "~7.1.0-pre.0",
+    "@fitbit/sdk-cli": "~1.8.0-pre.10",
+    "@fitbit/sdk-build-targets": "../fitbit-versa4-app/packages/sdk-build-targets"
+  },
   "scripts": {
     "build": "fitbit-build",
     "debug": "fitbit"
-  },
-  "devDependencies": {
-    "@fitbit/sdk": "~7.1.0-pre.0",
-    "@fitbit/sdk-cli": "~1.8.0-pre.10"
   }
 }
