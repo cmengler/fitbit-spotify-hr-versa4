@@ -29,7 +29,7 @@
     "prettier": "^2.8.4"
   },
   "scripts": {
-    "format": "prettier --write app/*.js app/**/*.js companion/*.js companion/**/*.js",
+    "format": "prettier --write app/*.js app/**/*.js companion/*.js companion/**/*.js common/*.js settings/*.jsx resources/*.css",
     "build": "fitbit-build",
     "debug": "fitbit"
   }

@@ -1,6 +1,6 @@
 text {
   font-size: 16;
-  font-family: "System-Light";
+  font-family: 'System-Light';
   font-weight: light;
   text-length: 32;
   fill: white;
@@ -17,7 +17,7 @@ rect {
 }
 
 rect.button {
-  fill-opacity: 0; 
+  fill-opacity: 0;
 }
 
 .main-heading {
@@ -73,14 +73,14 @@ rect.button {
 }
 
 #player-current-artist-name {
-  opacity: .75;
+  opacity: 0.75;
   font-size: 18;
   text-length: 32;
   text-overflow: ellipsis;
 }
 
 #player-current-playlist-name {
-  opacity: .75;
+  opacity: 0.75;
   font-size: 18;
   text-length: 32;
   text-overflow: ellipsis;
@@ -142,14 +142,14 @@ rect.button {
 }
 
 #player-current-artist-name {
-  opacity: .75;
+  opacity: 0.75;
   font-size: 18;
   text-length: 32;
   text-overflow: ellipsis;
 }
 
 #player-current-playlist-name {
-  opacity: .75;
+  opacity: 0.75;
   font-size: 18;
   text-length: 32;
   text-overflow: ellipsis;

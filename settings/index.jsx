@@ -1,4 +1,4 @@
-import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, SPOTIFY_SCOPES } from "../common/spotify.secret";
+import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, SPOTIFY_SCOPES } from '../common/spotify.secret';
 
 function mySettings(props) {
   const refreshToken = props.settingsStorage.getItem('spotify_refresh_token');
@@ -7,13 +7,14 @@ function mySettings(props) {
   return (
     <Page>
       <Section
-        title={<Text bold align="center">Spotify HR Settings</Text>}
-        >
-        {isLoggedIn &&
-          <Text>
-            Logged in as {currentUserName}
-          </Text>}
-        {!isLoggedIn &&
+        title={
+          <Text bold align="center">
+            Spotify HR Settings
+          </Text>
+        }
+      >
+        {isLoggedIn && <Text>Logged in as {currentUserName}</Text>}
+        {!isLoggedIn && (
           <Oauth
             settingsKey="oauth-spotify"
             title="Spotify Login"
@@ -25,18 +26,20 @@ function mySettings(props) {
             clientSecret={SPOTIFY_CLIENT_SECRET}
             scope={SPOTIFY_SCOPES}
             onReturn={(data) => {
-               console.log(`[Settings] Auth code received`)
-               props.settingsStorage.setItem('spotify_current_user_name', '');
-               props.settingsStorage.setItem('spotify_refresh_token', '');
-               props.settingsStorage.setItem('spotify_oauth_code', data.code);
+              console.log(`[Settings] Auth code received`);
+              props.settingsStorage.setItem('spotify_current_user_name', '');
+              props.settingsStorage.setItem('spotify_refresh_token', '');
+              props.settingsStorage.setItem('spotify_oauth_code', data.code);
             }}
-          />}
-        {isLoggedIn &&
+          />
+        )}
+        {isLoggedIn && (
           <Button
-            style={{color: 'red'}}
+            style={{ color: 'red' }}
             label="Logout"
             onClick={() => props.settingsStorage.setItem('spotify_refresh_token', '')}
-          />}
+          />
+        )}
       </Section>
     </Page>
   );
