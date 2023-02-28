@@ -24,10 +24,12 @@
   },
   "devDependencies": {
     "@fitbit/sdk": "~7.1.0-pre.0",
+    "@fitbit/sdk-build-targets": "cmengler/fitbit-sdk-build-targets",
     "@fitbit/sdk-cli": "~1.8.0-pre.10",
-    "@fitbit/sdk-build-targets": "cmengler/fitbit-sdk-build-targets"
+    "prettier": "^2.8.4"
   },
   "scripts": {
+    "format": "prettier --write app/*.js app/**/*.js companion/*.js companion/**/*.js",
     "build": "fitbit-build",
     "debug": "fitbit"
   }

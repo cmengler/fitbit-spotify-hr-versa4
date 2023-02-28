@@ -1,17 +1,17 @@
-import * as Commands from "../../common/commands";
+import * as Commands from '../../common/commands';
 
 class PhysicalButtons {
   constructor(app) {
     this.app = app;
   }
-  
+
   initialize() {
     const app = this.app;
-    
+
     app.broker.registerHandler(Commands.PHYSICAL_KEY_PRESS, (key) => {
-      switch(app.state.page) {
+      switch (app.state.page) {
         case 'player':
-          switch(key) {
+          switch (key) {
             case 'up':
               app.broker.runCommandHandlers(Commands.NEXT_TRACK);
               return;
@@ -21,7 +21,7 @@ class PhysicalButtons {
           }
           return;
         case 'playlists':
-          switch(key) {
+          switch (key) {
             case 'up':
               app.broker.runCommandHandlers(Commands.SCROLL_UP_PLAYLIST);
               return;
@@ -31,7 +31,7 @@ class PhysicalButtons {
           }
           return;
         case 'volume':
-          switch(key) {
+          switch (key) {
             case 'up':
               app.broker.runCommandHandlers(Commands.INCREASE_VOLUME);
               return;
