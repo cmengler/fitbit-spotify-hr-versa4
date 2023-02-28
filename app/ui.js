@@ -45,8 +45,7 @@ class Ui {
         currentTrackName: document.getElementById('player-current-track-name'),
         currentArtistName: document.getElementById('player-current-artist-name'),
         currentHeartRate: document.getElementById('heart-rate-number'),
-        trackProgressBarContainer: document.getElementById('track-progress-bar-container'),
-        trackProgressBarFill: document.getElementById('track-progress-bar-fill'),
+        trackProgress: document.getElementById('track-progress'),
       },
       playlists: {
         container: document.getElementById('playlists-picker'),
@@ -126,9 +125,7 @@ class Ui {
 
   renderPlayerProgressBar(percent) {
     let elements = this.elements;
-    
-    const container = elements.page.player.trackProgressBarContainer;
-    elements.page.player.trackProgressBarFill.width = device.screen.width * Math.min(1, percent || 0);
+    elements.page.player.trackProgress.sweepAngle = 360 * Math.min(1, percent || 0); 
   }
 
   renderPlaylistsPage(state) {

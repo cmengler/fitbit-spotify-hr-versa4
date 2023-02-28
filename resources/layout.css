@@ -203,7 +203,7 @@
   y: 30;
   width: 100%-50;
 }
- 
+
 #player-current-playlist-name {
   x: 0;
   y: 55;
@@ -224,20 +224,11 @@
   height: 50;
 }
 
-#track-progress-bar-container {
-  x: 18;
-  y: 298;
-  width: 300;
-  height: 2;
-  fill: #333333;
-}
-
-#track-progress-bar-fill {
-  x: 18;
-  y: 298;
-  width: 100%;
-  height: 2;
-  fill: #dddddd;
+#track-progress {
+  x: 112;
+  y: 86;
+  width: 110;
+  height: 110;
 }
 
 /**
@@ -383,5 +374,3 @@
   width: 50;
   height: 50;
 }
-
-
