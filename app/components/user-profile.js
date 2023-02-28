@@ -1,12 +1,12 @@
-import { user } from "user-profile";
-import * as Commands from "../../common/commands";
+import { user } from 'user-profile';
+import * as Commands from '../../common/commands';
 
 class UserProfile {
   constructor(ui, broker) {
-    this.ui = ui; 
-    this.broker = broker; 
+    this.ui = ui;
+    this.broker = broker;
   }
-  
+
   initialize() {
     // Wait for companion to initialize
     setTimeout(() => {
@@ -15,7 +15,7 @@ class UserProfile {
         restingHeartRate: user.restingHeartRate,
       });
     }, 4000);
-    
+
     console.log(`[FitBit] Initialized user`);
   }
 }

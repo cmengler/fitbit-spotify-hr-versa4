@@ -1,4 +1,4 @@
-import * as Commands from "../common/commands";
+import * as Commands from '../common/commands';
 
 class App {
   broker = null;
@@ -33,7 +33,7 @@ class App {
     },
     playlistPage: {
       currentPlaylistId: null,
-    }
+    },
   };
 
   constructor(broker) {
@@ -41,12 +41,16 @@ class App {
   }
 
   hasPlaylistId(id) {
-    return this.state.playlists.filter(i => i.id === id).length > 0;
+    return this.state.playlists.filter((i) => i.id === id).length > 0;
   }
 
   getCurrentPlayingPlaylist() {
-     return (this.state.playlists || [])
-      .filter(i => i.id === this.state.playerPage.currentPlaylistId)[0] || {id: null, name: 'Unknown'};
+    return (
+      (this.state.playlists || []).filter((i) => i.id === this.state.playerPage.currentPlaylistId)[0] || {
+        id: null,
+        name: 'Unknown',
+      }
+    );
   }
 
   getVisiblePlaylistsOnPlaylistPage() {
@@ -54,41 +58,41 @@ class App {
 
     const key = allPlaylists
       .map((i, key) => {
-        return {key, id: i.id};
+        return { key, id: i.id };
       })
-      .filter(i => i.id === this.state.playlistPage.currentPlaylistId)
-      .map(i => i.key)[0];
+      .filter((i) => i.id === this.state.playlistPage.currentPlaylistId)
+      .map((i) => i.key)[0];
 
     const current = key !== undefined ? allPlaylists[key] : null;
     const previous = key > 0 ? allPlaylists[key - 1] : allPlaylists[allPlaylists.length - 1];
     const next = key < allPlaylists.length - 1 ? allPlaylists[key + 1] : allPlaylists[0];
 
-    return {current, previous, next};
+    return { current, previous, next };
   }
 
   getInferredTimeLeftOnCurrentTrack() {
     const millisecondsLeftOnTrack = this.state.playerPage.millisecondsLeftOnTrack;
-    
+
     if (!millisecondsLeftOnTrack) {
       return null;
     }
-    
+
     if (!this.state.playerPage.recievedUpdateAt) {
       return millisecondsLeftOnTrack;
     }
-    
+
     const durationSinceUpdate = new Date().getTime() - this.state.playerPage.recievedUpdateAt;
-    
+
     return millisecondsLeftOnTrack - durationSinceUpdate;
   }
 
   getVisisblePlaylistName() {
-     return this.state.playerPage.overrideCurrentPlaylistName || this.getCurrentPlayingPlaylist().name;
+    return this.state.playerPage.overrideCurrentPlaylistName || this.getCurrentPlayingPlaylist().name;
   }
 
   getUiState() {
     let playlistsPage = this.getVisiblePlaylistsOnPlaylistPage();
-    
+
     return {
       page: this.state.page,
       playerPage: {
@@ -109,7 +113,7 @@ class App {
       },
       volumePage: {
         currentVolume: this.state.playerPage.volumePercent,
-      }
+      },
     };
   }
 

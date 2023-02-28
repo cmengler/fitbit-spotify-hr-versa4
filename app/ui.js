@@ -1,7 +1,7 @@
-import document from "document";
-import * as messaging from "messaging";
-import HearRateTracker from "./components/heart-rate";
-import { me as device } from "device";
+import document from 'document';
+import * as messaging from 'messaging';
+import HearRateTracker from './components/heart-rate';
+import { me as device } from 'device';
 
 class Ui {
   savedState = [];
@@ -64,24 +64,24 @@ class Ui {
         volumeBarContainer: document.getElementById('volume-bar-container'),
         volumeBarFill: document.getElementById('volume-bar-fill'),
         doneButton: document.getElementById('volume-done-button'),
-      }
+      },
     },
     shared: {
       buttons: document.getElementsByClassName('button'),
-    }
+    },
   };
 
   initialize() {
-    if (!device.screen) { 
+    if (!device.screen) {
       device.screen = { width: 348, height: 250 };
     }
-    
+
     console.log(`Dimensions: ${device.screen.width}x${device.screen.height}`);
   }
 
   render(state) {
     let elements = this.elements;
-    
+
     console.log(`Rendering page ${state.page}`);
 
     // Current page
@@ -98,25 +98,27 @@ class Ui {
     if (state.page === 'player') {
       this.renderPlayerPage(state);
     }
-    
+
     if (state.page === 'playlists') {
       this.renderPlaylistsPage(state);
     }
-    
+
     if (state.page === 'volume') {
       this.renderVolumePage(state);
     }
-    
+
     this.currentState = state;
   }
 
   renderPlayerPage(state) {
     let elements = this.elements;
-    
+
     elements.page.player.playButton.style.display = state.playerPage.isPlaying ? 'none' : 'inline';
     elements.page.player.pauseButton.style.display = state.playerPage.isPlaying ? 'inline' : 'none';
-    elements.page.player.heartRateShuffleIcon.style.display = state.playerPage.heartRateShuffleEnabled ? 'inline' : 'none';
-    
+    elements.page.player.heartRateShuffleIcon.style.display = state.playerPage.heartRateShuffleEnabled
+      ? 'inline'
+      : 'none';
+
     elements.page.player.currentPlaylistName.text = state.playerPage.currentPlaylistName;
     elements.page.player.currentTrackName.text = state.playerPage.currentTrackName;
     elements.page.player.currentArtistName.text = state.playerPage.currentArtistName;
@@ -125,12 +127,12 @@ class Ui {
 
   renderPlayerProgressBar(percent) {
     let elements = this.elements;
-    elements.page.player.trackProgress.sweepAngle = 360 * Math.min(1, percent || 0); 
+    elements.page.player.trackProgress.sweepAngle = 360 * Math.min(1, percent || 0);
   }
 
   renderPlaylistsPage(state) {
     let elements = this.elements;
-    
+
     elements.page.playlists.previousText.text = state.playlistsPage.previous;
     elements.page.playlists.currentText.text = state.playlistsPage.current;
     elements.page.playlists.nextText.text = state.playlistsPage.next;
@@ -138,11 +140,11 @@ class Ui {
 
   renderVolumePage(state) {
     let elements = this.elements;
-    
+
     const container = elements.page.volume.volumeBarContainer;
     const volume = state.volumePage.currentVolume / 100;
-    
-    elements.page.volume.volumeBarFill.y = container.y + (container.height * (1 - volume));
+
+    elements.page.volume.volumeBarFill.y = container.y + container.height * (1 - volume);
     elements.page.volume.volumeBarFill.height = container.height * volume;
   }
 
@@ -162,16 +164,16 @@ class Ui {
     if (!element.firstChild) {
       return [];
     }
-    
+
     let children = [element.firstChild];
     let current = element.firstChild;
-    
-    while (current = current.nextSibling) {
+
+    while ((current = current.nextSibling)) {
       children.push(current);
     }
-    
+
     return children;
   }
 }
-        
+
 export default Ui;
