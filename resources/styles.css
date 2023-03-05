@@ -7,8 +7,6 @@ text {
 }
 
 #background {
-  width: 100%;
-  height: 100%;
   fill: #181818;
 }
 
@@ -91,6 +89,10 @@ rect.button {
   arc-width: 10;
   start-angle: 0;
   sweep-angle: 360;
+}
+
+.player-control-button {
+  fill: #181818;
 }
 
 /* Playlist page */

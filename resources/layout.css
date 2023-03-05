@@ -160,6 +160,9 @@
 #back-button {
   x: 28;
   y: 107;
+}
+
+#back-button #image {
   width: 70;
   height: 70;
 }
@@ -167,6 +170,14 @@
 #play-button {
   x: 118;
   y: 90;
+}
+
+#player-controls #image {
+  x: 0;
+  y: 0;
+}
+
+#play-button #image {
   width: 100;
   height: 100;
 }
@@ -174,6 +185,9 @@
 #pause-button {
   x: 118;
   y: 90;
+}
+
+#pause-button #image {
   width: 100;
   height: 100;
 }
@@ -181,6 +195,9 @@
 #next-button {
   x: 238;
   y: 107;
+}
+
+#next-button #image {
   width: 70;
   height: 70;
 }
