@@ -1,5 +1,6 @@
 import document from 'document';
 import * as messaging from 'messaging';
+import { me } from "appbit";
 import MessageBroker from '../common/message-broker';
 import * as Commands from '../common/commands';
 import Ui from './ui';
@@ -13,6 +14,8 @@ import Logo from './components/logo';
 import PhysicalButtons from './components/physical-buttons';
 import OnScreenButtons from './components/on-screen-buttons';
 import Menu from './components/menu';
+
+me.appTimeoutEnabled = false; 
 
 const broker = new MessageBroker('[FitBit]');
 
