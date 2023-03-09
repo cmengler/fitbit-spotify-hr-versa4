@@ -62,10 +62,20 @@
       </rect>
     </svg>
 
-    <image id="back-button" class="button" href="icons/back-button-white.png" load="sync" pointer-events="visible" />
-    <image id="play-button" class="button" href="icons/play-button-white.png" load="sync" pointer-events="visible" />
-    <image id="pause-button" class="button" href="icons/pause-button-white.png" load="sync" pointer-events="visible" />
-    <image id="next-button" class="button" href="icons/skip-button-white.png" load="sync" pointer-events="visible" />
+    <svg id="player-controls">
+      <use id="back-button" href="#icon-button" class="medium-button player-control-button">
+        <set href="#image" attributeName="href" to="icons/back-button-white.png" />
+      </use>
+      <use id="play-button" href="#icon-button" class="large-button player-control-button">
+        <set href="#image" attributeName="href" to="icons/play-button-white.png" />
+      </use>
+      <use id="pause-button" href="#icon-button" class="large-button player-control-button">
+        <set href="#image" attributeName="href" to="icons/pause-button-white.png" />
+      </use>
+      <use id="next-button" href="#icon-button" class="medium-button player-control-button">
+        <set href="#image" attributeName="href" to="icons/skip-button-white.png" />
+      </use>
+    </svg>
 
     <svg id="current-track">
       <text id="player-current-track-name">TRACK</text>

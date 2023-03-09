@@ -5,5 +5,6 @@
     <link rel="import" href="/mnt/sysassets/system_widget.defs" />
     <link rel="import" href="/mnt/sysassets/widgets/baseview_widget.defs" />
     <link rel="import" href="/mnt/sysassets/widgets/tile_list_widget.defs" />
+    <link rel="import" href="/mnt/sysassets/widgets/icon_button.defs" />
   </defs>
 </svg>
