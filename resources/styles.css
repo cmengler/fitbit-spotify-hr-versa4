@@ -7,11 +7,11 @@ text {
 }
 
 #background {
-  fill: #181818;
+  fill: #000000;
 }
 
 rect {
-  fill: #181818;
+  fill: #000000;
 }
 
 rect.button {
@@ -92,7 +92,7 @@ rect.button {
 }
 
 .player-control-button {
-  fill: #181818;
+  fill: #000000;
 }
 
 /* Playlist page */
