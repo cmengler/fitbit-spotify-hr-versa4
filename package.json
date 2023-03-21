@@ -19,8 +19,7 @@
       "en": {
         "name": "Spotify HR"
       }
-    },
-    "enableProposedAPI": true
+    }
   },
   "devDependencies": {
     "@fitbit/sdk": "~6.2.0-pre.1",
