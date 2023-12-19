@@ -13,7 +13,8 @@
     ],
     "buildTargets": [
       "atlas",
-      "hera"
+      "hera",
+      "rhea"
     ],
     "i18n": {
       "en": {
